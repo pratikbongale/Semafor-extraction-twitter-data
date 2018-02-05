@@ -32,28 +32,28 @@ Underneath the root folder, there are the following files and folders:
 <dl>
   <dt>data-cleaning/</dt>
     <dd>
-      extract_tweet_text.py: Transforms twitter data into simple text format(one tweet per line). This step is performed to convert twitter data in a format(One text sentence per line) as expected by semafor.</br></br>
-
-      Takes two arguments: </br>
-      1. Twitter input data in JSON format </br>
-      2. Output file-name where you wish to store the extracted tweets.</br>
+      extract_tweet_text.py: Transforms twitter data into simple text format(one tweet per line). This step is performed to convert twitter data in a format(One text sentence per line) as expected by semafor.
+      Takes two arguments: 
+      1. Twitter input data in JSON format 
+      2. Output file-name where you wish to store the extracted tweets.
       Note: Output file should be a simple (.txt) file.
     </dd>
 
   <dt>post-processing/</dt>
     <dd>
       print_detected_frames.py: Run this file after semafor successfully retrieves frames related to tweets. The output of semafor is a json file. Running this file will print those extracted frames in a human readable format.
-
-      Takes a single argument: </br>
+      Takes a single argument:
       1. The name of JSON file which contains the frames extracted by semafor.
     </dd>
 </dl>
 
 6. If you wish to run the demo given in step 7, make sure your directory structure is as follows:
-[[https://github.com/pratikbongale/semafor-extraction-twitter-data/blob/master/directory_structure.png|alt=dir_structure]]
+[Directory structure setup for demo](directory_structure.png)
 
 7. Steps to run a quick demo with sample datasets already present in the repository:
 root:
+
+```
 SEMAFOR_DEMO/
 $ cd semafor
 $ mvn package
@@ -70,11 +70,11 @@ $ python extract_tweet_text.py inp_test.json out_test.txt
 
 Process Complete.
 Output written to file:  out_test.txt
-# lines written:  50
+No. of lines written:  50
 
 $ cd ../semafor/bin
 
-# syntax to run semafor: ./runSemafor.sh <absolute-path-to-input-file-with-one-sentence-per-line> <output-file> <number-of-threads>
+>> syntax to run semafor: ./runSemafor.sh <absolute-path-to-input-file-with-one-sentence-per-line> <output-file> <number-of-threads>
 $ ./runSemafor.sh ../../data-cleaning/out_test.txt ../../post-processing/extracted_frames.json 10
 
 real	0m28.544s
@@ -83,7 +83,7 @@ sys	0m2.196s
 Finished frame-semantic parsing.
 ********************************
 
-# if the program errors out saying:
+>> if the program errors out saying:
   edu.cmu.cs.lti.ark.util.CommandLineOptions$InvalidOptionsException: Parent directory of the value of 'output-file' option does not exist: ./extracted_frames.json
   	at edu.cmu.cs.lti.ark.util.CommandLineOptions$NewFilePathOption.set(CommandLineOptions.java:127)
   	at edu.cmu.cs.lti.ark.util.CommandLineOptions.init(CommandLineOptions.java:267)
@@ -95,3 +95,4 @@ Finished frame-semantic parsing.
 
 $ cd ../../post-processing
 $ python print_detected_frames.py extracted_frames.json
+```
