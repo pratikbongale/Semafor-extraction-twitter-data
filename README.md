@@ -50,31 +50,7 @@ Underneath the root folder, there are the following files and folders:
 </dl>
 
 6. If you wish to run the demo given in step 7, make sure your directory structure is as follows:
-SEMAFOR_DEMO/
-├── data-cleaning
-│   ├── extract_tweet_text.py
-│   └── inp_test.json
-├── models
-│   └── semafor_malt_model_20121129
-│       ├── argmodel.dat
-│       ├── engmalt.linear-1.7.mco
-|       ...
-├── post-processing
-│   └── print_detected_frames.py
-├── README.md
-└── semafor
-    ├── bin
-    │   ├── config.sh
-    │   ├── runMalt.sh
-    │   ├── runSemafor.sh
-    │   └── tokenizeAndPosTag.sh
-    ├── dependency-reduced-pom.xml
-    ├── dict
-    │   ├── adj.dat
-    │   ├── adj.exc
-    │   ├── adj.idx
-    |   ...
-
+[[https://github.com/pratikbongale/semafor-extraction-twitter-data/blob/master/directory_structure.png|alt=dir_structure]]
 
 7. Steps to run a quick demo with sample datasets already present in the repository:
 root:
