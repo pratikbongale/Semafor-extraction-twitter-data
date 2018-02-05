@@ -8,8 +8,7 @@ Pre-requisites: Java 1.8, Python 3.6
 
 3. Navigate to semafor/bin directory and perform the following steps
 
-Environment Variables setup
--------------------------------
+###### Environment Variables setup:
 The file `bin/config.sh` lists a set of variables which should be modified within the file before running
 SEMAFOR:
 
@@ -24,9 +23,7 @@ SEMAFOR:
 
 5. Clone current repository:
 
-Contents
-========
-
+###### Contents
 Underneath the root folder, there are the following files and folders:
 
 <dl>
